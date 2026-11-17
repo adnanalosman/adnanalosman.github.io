@@ -2,7 +2,7 @@
 
 A restrained, bilingual portfolio presenting Adnan's professional work in data operations and reporting alongside his ongoing, self-taught C++ learning journey.
 
-**Intended GitHub Pages address:** https://adnanalosman.github.io/  
+**Live website:** https://adnanalosman.github.io/  
 **Languages:** English (default) and Arabic with native RTL layout.
 
 ## Design and implementation
@@ -52,7 +52,9 @@ Do not label projects complete merely because a repository exists. Recheck the i
 
 ## GitHub Pages deployment
 
-For the clean account URL, create a **new public** repository named `adnanalosman.github.io` under `adnanalosman`, then upload this project to its `main` branch. Do not replace an existing repository.
+This project is published from the dedicated public repository [adnanalosman/adnanalosman.github.io](https://github.com/adnanalosman/adnanalosman.github.io). English is at the root address, and Arabic is at [adnanalosman.github.io/ar/](https://adnanalosman.github.io/ar/).
+
+Pages is configured for **Deploy from a branch → main → /docs**, with HTTPS enforced. To reproduce the configuration in a separate new repository:
 
 1. Open the new repository's **Settings → Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**.
@@ -67,7 +69,7 @@ GitHub's official guide: https://docs.github.com/en/pages/getting-started-with-g
 
 `npm test` checks generated local links and assets, fragment targets, unique IDs, language and RTL metadata, structured data, project count, source URLs, contact privacy and core text contrast. Browser checks should cover mobile, tablet and desktop layouts; both themes and languages; navigation; all project disclosures; keyboard operation; and clipboard feedback.
 
-No claim of a Lighthouse score, production accessibility certification or successful deployment is made by these tests. See `QA.md` for the checks actually performed.
+These tests do not establish a Lighthouse score or comprehensive accessibility certification. Public deployment and browser checks are recorded separately in `QA.md`.
 
 ## Attribution
 

@@ -15,14 +15,16 @@ Date: **17 November 2026**
 - Self-hosted fonts loaded. C++ and other Latin technical terms are directionally isolated in Arabic text.
 - Browser error inspection found no application-origin errors; browser-extension metadata errors were unrelated to the site.
 
-## Limits and publication state
+## Public deployment
+
+- Created the dedicated public repository [adnanalosman/adnanalosman.github.io](https://github.com/adnanalosman/adnanalosman.github.io); existing repositories were not modified.
+- Published using **main → /docs**, with HTTPS enforced.
+- GitHub Pages deployment [44069467532](https://github.com/adnanalosman/adnanalosman.github.io/actions/runs/44069467532) completed successfully for the initial portfolio commit `90e1b00e328bd3d8019b604be5fc8f98f621abd5`.
+- Opened the public [English page](https://adnanalosman.github.io/) and [Arabic page](https://adnanalosman.github.io/ar/). Verified stylesheet and local fonts loaded, desktop layout without horizontal overflow, dark-mode switching, section navigation, language switching with the section and theme retained, and opening Arabic project details.
+- Repository About links to the public Pages website.
+
+## Limits
 
 - Tests used Chromium and responsive iframe viewports, not physical devices or multiple browser engines.
 - No Lighthouse score or comprehensive accessibility certification is claimed.
 - Original C++ repositories were inspected read-only. Their code was not modified or executed as part of this portfolio task.
-- The dedicated public repository `adnanalosman/adnanalosman.github.io` was created on 17 November 2026. Publication and public-address verification are pending at this checkpoint.
-- The intended canonical URL in the files is a deployment target, not evidence of an already-live website.
-
-## Remaining deployment steps
-
-Upload the prepared source and `docs/` to the new repository; enable Pages for `main` → `/docs`; verify the resulting public address.
