@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adnanalosman.github.io/sitemap.xml

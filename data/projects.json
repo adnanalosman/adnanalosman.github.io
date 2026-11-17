@@ -1,0 +1,106 @@
+[
+  {
+    "id": "bank",
+    "repo": "https://github.com/adnanalosman/bank-client-management-system",
+    "source": "https://github.com/adnanalosman/bank-client-management-system/blob/main/Main.cpp",
+    "tags": ["C++", "Structs & vectors", "File I/O"],
+    "en": {
+      "name": "Bank Client Management",
+      "category": "Records & persistence",
+      "status": "Educational prototype",
+      "complexity": "Intermediate learning project",
+      "description": "A menu-driven console application for maintaining client records, recording deposits and withdrawals, and reviewing balances. Records are saved to a local text file.",
+      "features": ["Add, find, update and delete client records", "Pipe-delimited text storage with C++ file streams", "Deposit, withdrawal and total-balance menus"],
+      "learning": "Connecting structured data, file persistence and an interactive workflow.",
+      "limitations": "A Windows-oriented learning prototype. Input validation, portable storage paths and secure handling of PINs need further development. Not intended for real banking data."
+    },
+    "ar": {
+      "name": "نظام إدارة عملاء البنك",
+      "category": "السجلات وحفظ البيانات",
+      "status": "نموذج تعليمي",
+      "complexity": "مشروع تعليمي متوسط التعقيد",
+      "description": "تطبيق يعمل عبر سطر الأوامر لإدارة سجلات العملاء وتنفيذ عمليات الإيداع والسحب وعرض الأرصدة، مع حفظ السجلات في ملف نصي محلي.",
+      "features": ["إضافة سجلات العملاء والبحث عنها وتعديلها وحذفها", "قراءة البيانات وحفظها في ملف نصي بفاصل بين الحقول", "قوائم للإيداع والسحب وعرض إجمالي الأرصدة"],
+      "learning": "الربط بين البيانات المنظمة وحفظ الملفات وتسلسل عمل تفاعلي.",
+      "limitations": "نموذج للتعلّم موجّه إلى Windows. يحتاج إلى تطوير التحقق من المدخلات ومسار التخزين وحماية الأرقام السرية. غير مخصص لبيانات مصرفية حقيقية."
+    }
+  },
+  {
+    "id": "math",
+    "repo": "https://github.com/adnanalosman/Project-2---Math-Quiz-Game",
+    "source": "https://github.com/adnanalosman/Project-2---Math-Quiz-Game/blob/master/Project%202%20-%20Math%20Quiz%20Game/Project%202%20-%20Math%20Quiz%20Game.cpp",
+    "tags": ["C++", "Enums", "Functions"],
+    "en": {
+      "name": "Math Quiz Game",
+      "category": "Logic & interaction",
+      "status": "Learning project",
+      "complexity": "Foundational project",
+      "description": "A configurable arithmetic quiz with difficulty levels, operation selection, immediate answer feedback and a final score report.",
+      "features": ["One to ten questions per game", "Easy, medium, hard and mixed difficulty", "Round feedback, score summary and replay"],
+      "learning": "Breaking a game into small functions and managing state across rounds.",
+      "limitations": "Console application with Windows-specific screen commands. Division uses integer arithmetic; mixed operation mode selects one operation per game in the reviewed code."
+    },
+    "ar": {
+      "name": "لعبة الاختبار الحسابي",
+      "category": "المنطق والتفاعل",
+      "status": "مشروع تعليمي",
+      "complexity": "مشروع تأسيسي",
+      "description": "اختبار حسابي يتيح اختيار مستوى الصعوبة ونوع العملية، مع تصحيح فوري للإجابات وتقرير نهائي للنتيجة.",
+      "features": ["من سؤال إلى عشرة أسئلة في الجولة", "مستويات سهل ومتوسط وصعب ومختلط", "تصحيح الإجابات وتلخيص النتائج وإعادة اللعب"],
+      "learning": "تقسيم منطق اللعبة إلى دوال صغيرة وإدارة الحالة بين الأسئلة.",
+      "limitations": "تطبيق سطر أوامر يستخدم أوامر شاشة خاصة بـ Windows. القسمة صحيحة دون كسور، ويختار وضع العمليات المختلطة عملية واحدة لكل لعبة في الكود الذي تمت مراجعته."
+    }
+  },
+  {
+    "id": "rps",
+    "repo": "https://github.com/adnanalosman/Project-1---Rock-Paper-Scissors-Game",
+    "source": "https://github.com/adnanalosman/Project-1---Rock-Paper-Scissors-Game/blob/master/Project%201%20-%20Rock-Paper-Scissors%20Game/Project%201%20-%20Rock-Paper-Scissors%20Game.cpp",
+    "tags": ["C++", "Control flow", "Console"],
+    "en": {
+      "name": "Rock, Paper, Scissors",
+      "category": "Rules & game state",
+      "status": "Learning project",
+      "complexity": "Foundational project",
+      "description": "A multi-round console game against a randomized computer opponent, with round outcomes, score tracking and a replay loop.",
+      "features": ["Player-selected number of rounds", "Win, loss and draw tracking", "Round summaries and an overall result"],
+      "learning": "Turning simple rules into explicit conditions and reusable functions.",
+      "limitations": "A foundational console exercise. Screen clearing and colors use Windows commands; non-numeric input handling can be improved."
+    },
+    "ar": {
+      "name": "حجر، ورقة، مقص",
+      "category": "القواعد وحالة اللعبة",
+      "status": "مشروع تعليمي",
+      "complexity": "مشروع تأسيسي",
+      "description": "لعبة عبر سطر الأوامر ضد اختيار عشوائي للحاسوب، مع جولات متعددة وتتبع للنتائج وإمكانية إعادة اللعب.",
+      "features": ["اختيار عدد الجولات", "تتبع الفوز والخسارة والتعادل", "ملخص لكل جولة ونتيجة نهائية"],
+      "learning": "تحويل قواعد بسيطة إلى شروط واضحة ودوال قابلة لإعادة الاستخدام.",
+      "limitations": "تمرين تأسيسي عبر سطر الأوامر. مسح الشاشة وتغيير ألوانها يعتمدان على أوامر Windows، ومعالجة المدخلات غير الرقمية قابلة للتحسين."
+    }
+  },
+  {
+    "id": "algorithms",
+    "repo": "https://github.com/adnanalosman/Programmin-Advices-Course-8",
+    "source": "https://github.com/adnanalosman/Programmin-Advices-Course-8/blob/master/P%231-10/P%231-10.cpp",
+    "tags": ["C++", "Algorithms", "Date logic"],
+    "en": {
+      "name": "Algorithms & Problem Solving",
+      "category": "Programming Advices · Course 08",
+      "status": "Practice in progress",
+      "complexity": "Evolving exercise collection",
+      "description": "A growing practice repository covering number-to-text conversion, leap years, calendars and date calculations from the Programming Advices learning path.",
+      "features": ["Number-to-text and recursive decomposition", "Leap-year and calendar routines", "Date comparisons and arithmetic exercises"],
+      "learning": "Learning to reason about boundaries, decompose problems and revisit mistakes.",
+      "limitations": "Practice code under review, with date-logic edge cases still to resolve. The published repository is not evidence of completion of all course problems or final projects."
+    },
+    "ar": {
+      "name": "الخوارزميات وحل المشكلات",
+      "category": "مسار Programming Advices · الكورس 08",
+      "status": "تمارين قيد التطوير",
+      "complexity": "مجموعة تمارين متنامية",
+      "description": "مستودع ممارسة يضم تحويل الأرقام إلى كلمات، والسنوات الكبيسة، والتقويم، وحسابات التاريخ، ضمن مسار التعلّم في Programming Advices.",
+      "features": ["تحويل الأرقام إلى كلمات باستخدام الاستدعاء الذاتي", "دوال السنوات الكبيسة والتقويم", "تمارين مقارنة التواريخ والحساب عليها"],
+      "learning": "تحليل الحالات الحدّية وتقسيم المشكلات ومراجعة الأخطاء.",
+      "limitations": "كود للتدريب والمراجعة، مع حالات حدّية في منطق التواريخ تحتاج إلى تصحيح. محتوى المستودع المنشور لا يعني إكمال جميع مسائل الكورس أو مشاريعه النهائية."
+    }
+  }
+]

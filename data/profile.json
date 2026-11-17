@@ -1,0 +1,75 @@
+{
+  "name": "Adnan Alosman",
+  "github": "https://github.com/adnanalosman",
+  "siteUrl": "https://adnanalosman.github.io",
+  "verifiedOn": "2026-11-17",
+  "contactEmail": null,
+  "en": {
+    "title": "Adnan Alosman — Data, Reporting & Software Learning",
+    "description": "Data entry and reporting specialist with experience in Excel, Power BI and humanitarian projects. Explore Adnan Alosman's work and self-taught C++ learning journey.",
+    "role": "Data & reporting specialist · Self-taught programmer",
+    "heroLines": ["Reliable data.", "Thoughtful", "code."],
+    "heroDescription": "I bring structure to information and clarity to reports. Now, I’m building on that experience through hands-on learning in C++ and software development.",
+    "aboutTitle": "A practical mindset,\nfrom data to code.",
+    "aboutBody": "My work starts with the details: accurate records, consistent reporting and information people can use. I have more than five years of experience in data entry and processing across humanitarian and service projects.",
+    "aboutSecond": "Alongside that work, I’m a self-taught programming learner following the Programming Advices roadmap. I’m developing my understanding of C++, algorithms and problem solving, one practical project at a time.",
+    "expertise": [
+      {"name": "Data operations", "body": "Data entry, cleaning, record review and structured archiving. Careful handling of the details behind useful information.", "tags": ["Data quality", "Record management", "Documentation"]},
+      {"name": "Reporting & analysis", "body": "Excel reports, PivotTables, lookup formulas and Power BI dashboards that make operational data easier to understand.", "tags": ["Excel", "Power BI", "Reporting"]},
+      {"name": "Operational support", "body": "Field-data consolidation, reporting templates, document control and administrative and accounting support.", "tags": ["Field reporting", "Templates", "Admin support"]}
+    ],
+    "skills": [
+      {"label": "Used in professional work", "items": ["Microsoft Excel", "Power BI", "PivotTables", "XLOOKUP / SUMIFS", "Data validation", "Reporting & archiving"]},
+      {"label": "Developing through practice", "items": ["C++", "Algorithms", "Functions & structs", "Vectors", "Text-file I/O", "GitHub / Visual Studio"]},
+      {"label": "Additional technical background", "items": ["Windows & macOS", "Basic networking", "WordPress", "Image & video editing"]}
+    ],
+    "experienceTitle": "Data work grounded\nin real operations.",
+    "experienceRole": "Data & reporting responsibilities",
+    "experienceContext": "IYD · Humanitarian water services",
+    "experienceDuration": "Approximately 4½ years · Project concluded in 2025",
+    "experienceBody": "Supported water-supply and water-quality work through organized field records, consolidated data and recurring reports.",
+    "experienceBullets": ["Prepared and reviewed records related to water trucking and water stations.", "Organized water-quality information and supporting documentation.", "Contributed to monthly reporting and operational data follow-up."],
+    "journey": [
+      {"stage": "Foundation", "name": "Learn the logic", "body": "Build understanding of variables, conditions, loops and functions through small C++ programs."},
+      {"stage": "Practice", "name": "Make it work", "body": "Apply fundamentals in console games, structured records and file-based client management."},
+      {"stage": "Ongoing", "name": "Keep improving", "body": "Continue algorithms and problem solving. Review edge cases and strengthen the reasoning behind each solution."}
+    ],
+    "nextLearning": "Longer-term direction: object-oriented programming, data structures, C# and SQL. These are learning goals, not claimed expertise.",
+    "contactTitle": "Let’s make\ninformation useful.",
+    "contactBody": "Interested in data operations, reporting or practical software? Explore my public work and professional profile on GitHub."
+  },
+  "ar": {
+    "title": "عدنان العثمان — البيانات والتقارير وتعلّم البرمجة",
+    "description": "متخصص في إدخال البيانات والتقارير، بخبرة في Excel وPower BI والمشاريع الإنسانية. اطّلع على أعمال عدنان العثمان ورحلته في التعلّم الذاتي للبرمجة بلغة C++.",
+    "role": "متخصص في البيانات والتقارير · متعلّم ذاتي للبرمجة",
+    "heroLines": ["بيانات موثوقة.", "وبرمجة", "واعية."],
+    "heroDescription": "أحوّل المعلومات إلى سجلات منظمة وتقارير واضحة، وأبني على هذه الخبرة من خلال التعلّم العملي للغة C++ وتطوير البرمجيات.",
+    "aboutTitle": "عقلية عملية،\nمن البيانات إلى البرمجة.",
+    "aboutBody": "يبدأ عملي من التفاصيل: سجلات دقيقة، وتقارير متسقة، ومعلومات قابلة للاستخدام. لديّ خبرة تتجاوز خمس سنوات في إدخال البيانات ومعالجتها ضمن مشاريع إنسانية وخدمية.",
+    "aboutSecond": "إلى جانب عملي، أتعلّم البرمجة ذاتيًا خارج التعليم الجامعي، وفق خارطة Programming Advices. أطوّر فهمي للغة C++ والخوارزميات وحل المشكلات عبر التمارين والمشاريع العملية.",
+    "expertise": [
+      {"name": "إدارة البيانات", "body": "إدخال البيانات وتنظيفها ومراجعة السجلات والأرشفة المنظمة، مع الاهتمام بالتفاصيل التي تمنح المعلومات قيمتها.", "tags": ["جودة البيانات", "إدارة السجلات", "التوثيق"]},
+      {"name": "التقارير والتحليل", "body": "تقارير Excel والجداول المحورية ودوال البحث ولوحات Power BI، لعرض البيانات التشغيلية بوضوح.", "tags": ["Excel", "Power BI", "إعداد التقارير"]},
+      {"name": "الدعم التشغيلي", "body": "تجميع البيانات الميدانية وإعداد نماذج التقارير وتنظيم المستندات، إلى جانب الدعم الإداري والمحاسبي.", "tags": ["التقارير الميدانية", "النماذج", "الدعم الإداري"]}
+    ],
+    "skills": [
+      {"label": "أدوات ومهارات العمل", "items": ["Microsoft Excel", "Power BI", "PivotTables", "XLOOKUP / SUMIFS", "التحقق من البيانات", "التقارير والأرشفة"]},
+      {"label": "مهارات أطورها بالممارسة", "items": ["C++", "الخوارزميات", "الدوال والتراكيب", "Vectors", "قراءة الملفات وكتابتها", "GitHub / Visual Studio"]},
+      {"label": "خلفية تقنية إضافية", "items": ["Windows & macOS", "أساسيات الشبكات", "WordPress", "تحرير الصور والفيديو"]}
+    ],
+    "experienceTitle": "خبرة في البيانات،\nمرتبطة بالعمل الميداني.",
+    "experienceRole": "مهام البيانات وإعداد التقارير",
+    "experienceContext": "منظمة IYD · خدمات المياه الإنسانية",
+    "experienceDuration": "نحو أربع سنوات ونصف · انتهى المشروع في 2025",
+    "experienceBody": "دعمت أعمال إمداد المياه ومراقبة جودتها عبر تنظيم السجلات الميدانية وتجميع البيانات وإعداد التقارير الدورية.",
+    "experienceBullets": ["إعداد ومراجعة سجلات إمداد المياه بالصهاريج ومحطات المياه.", "تنظيم بيانات جودة المياه والوثائق الداعمة.", "المساهمة في التقارير الشهرية ومتابعة البيانات التشغيلية."],
+    "journey": [
+      {"stage": "التأسيس", "name": "فهم المنطق", "body": "بناء فهم للمتغيرات والشروط والحلقات والدوال من خلال برامج صغيرة بلغة C++."},
+      {"stage": "التطبيق", "name": "تحويل الفهم إلى عمل", "body": "تطبيق الأساسيات في ألعاب سطر الأوامر والسجلات المنظمة وإدارة العملاء باستخدام الملفات."},
+      {"stage": "تعلّم مستمر", "name": "المراجعة والتحسين", "body": "متابعة الخوارزميات وحل المشكلات، ومراجعة الحالات الحدّية وتعزيز فهم المنطق وراء كل حل."}
+    ],
+    "nextLearning": "الاتجاه على المدى الأبعد: البرمجة الكائنية وهياكل البيانات وC# وSQL. هذه أهداف للتعلّم، وليست خبرات مُدّعاة.",
+    "contactTitle": "لنمنح المعلومات\nقيمة عملية.",
+    "contactBody": "للمهتمين بأعمال البيانات والتقارير والحلول البرمجية العملية، تتوفر أعمالي المنشورة وملفي المهني على GitHub."
+  }
+}

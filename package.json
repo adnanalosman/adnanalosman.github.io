@@ -1,0 +1,13 @@
+{
+  "name": "adnan-alosman-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bilingual portfolio for Adnan Alosman — data, reporting and a growing software practice.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/site.test.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "engines": {"node": ">=20"}
+}
