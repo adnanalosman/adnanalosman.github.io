@@ -28,3 +28,15 @@ Date: **17 November 2026**
 - Tests used Chromium and responsive iframe viewports, not physical devices or multiple browser engines.
 - No Lighthouse score or comprehensive accessibility certification is claimed.
 - Original C++ repositories were inspected read-only. Their code was not modified or executed as part of this portfolio task.
+
+## Content editor — 18 November 2026
+
+- Built `/admin/` with profile/project forms, independent language fields, local drafts, JSON backups, preview and a GitHub publication client.
+- All **14 automated test groups** pass after the renderer was shared between Node and the browser. The nine editor groups cover validation, HTML escaping, Arabic/Unicode handling, five-file publication, credentials, concurrent changes, rejected permissions and uncertain network results. GitHub writes in these tests use a mock API.
+- Browser loaded the actual repository's public data. Editing Arabic did not change the English text; edited content appeared in the preview. English, dark-mode and mobile preview settings applied correctly.
+- Added an incomplete project, saved the local draft, reloaded and restored it. Publication review correctly refused incomplete fields. Removed the test project, reordered a project and checked the review summary.
+- Downloaded a complete JSON backup and imported that downloaded file through the file chooser; the editor requested confirmation and reported successful import. Reset the draft afterward. No test content was published.
+- Measured admin layouts at 320px and 768px iframe widths and a 1348px desktop content width. No document overflow was observed. Profile and project forms also fit the narrow frames; the publication dialog fit the 320px frame. The mobile section-navigation strip intentionally scrolls horizontally.
+- Inspected the desktop preview and mobile/tablet dashboard visually. No application-origin browser errors were observed.
+- The editor never stores a token in drafts or exports. It uses a fixed GitHub API origin, clears the input on submission/close, and has no third-party script or analytics dependency.
+- A publish attempt using a real personal access token has **not** been performed. The owner must supply a repository-scoped token for the first real editor publication. Public deployment of the editor is checked separately from the mocked write pipeline.

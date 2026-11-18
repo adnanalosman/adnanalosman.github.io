@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root=fileURLToPath(new URL('../',import.meta.url));
-const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.svg':'image/svg+xml','.woff':'font/woff','.png':'image/png','.xml':'application/xml','.txt':'text/plain'};
+const types={'.json':'application/json; charset=utf-8','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.svg':'image/svg+xml','.woff':'font/woff','.png':'image/png','.xml':'application/xml','.txt':'text/plain'};
 const args=process.argv.slice(2);
 const port=Number(args.includes('--port')?args[args.indexOf('--port')+1]:(process.env.PORT||3000));
 const host=args.includes('--host')?args[args.indexOf('--host')+1]:'0.0.0.0';

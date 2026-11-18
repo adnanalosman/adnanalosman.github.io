@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://api.github.com; frame-src 'self' about:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>استوديو المحتوى — Adnan Alosman</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./editor.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a href="#editor-main" class="skip">انتقل إلى مساحة التحرير</a>
+  <div class="studio">
+    <aside class="sidebar" aria-label="أقسام لوحة التحكم">
+      <a class="identity" href="../" target="_blank" rel="noopener"><span class="logo" aria-hidden="true">a.</span><span><strong lang="en" dir="ltr">Adnan Alosman</strong><small>استوديو المحتوى</small></span></a>
+      <p class="side-label">مساحة العمل</p>
+      <nav id="sections">
+        <button type="button" data-view="overview" aria-current="page"><span aria-hidden="true">◫</span>نظرة عامة</button>
+        <button type="button" data-view="profile"><span aria-hidden="true">◎</span>الملف الشخصي</button>
+        <button type="button" data-view="projects"><span aria-hidden="true">⌘</span>المشاريع <b id="project-count">—</b></button>
+        <button type="button" data-view="preview"><span aria-hidden="true">◉</span>المعاينة</button>
+        <button type="button" data-view="backup"><span aria-hidden="true">↓</span>النسخ الاحتياطية</button>
+      </nav>
+      <div class="side-note"><span class="dot"></span><strong>مسودتك أولًا</strong><p>التعديلات تبقى على هذا الجهاز حتى تختار نشرها.</p></div>
+      <a class="side-link" href="https://github.com/adnanalosman/adnanalosman.github.io" target="_blank" rel="noopener noreferrer">فتح المستودع <span aria-hidden="true">↗</span></a>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div><span class="eyebrow">لوحة التحكم</span><p id="save-state">جارٍ تحميل المحتوى…</p></div>
+        <div class="actions">
+          <button type="button" class="button subtle" id="reload" disabled>تحميل آخر نسخة</button>
+          <button type="button" class="button" id="save-draft" disabled>حفظ مسودة</button>
+          <button type="button" class="button primary" id="review" disabled>مراجعة ونشر <span aria-hidden="true">↗</span></button>
+        </div>
+      </header>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <div id="draft-banner" class="draft-banner" hidden><span>توجد مسودة محفوظة على هذا الجهاز.</span><button type="button" id="restore-draft">استعادة المسودة</button><button type="button" id="forget-draft">حذف المسودة المحفوظة</button></div>
+      <main id="editor-main" tabindex="-1">
+        <div class="page-heading"><div><p class="eyebrow" id="page-eyebrow">محتوى البورتفوليو</p><h1 id="page-title">محتواك، تحت السيطرة.</h1><p id="page-description">عدّل، عاين، ثم انشر. كل خطوة في مكان واحد.</p></div>
+          <div class="language-control" id="language-control" hidden><span>لغة المحتوى</span><div class="segmented"><button type="button" data-language="ar" aria-pressed="true">العربية</button><button type="button" data-language="en" aria-pressed="false" lang="en">English</button></div></div>
+        </div>
+        <div id="content"><div class="empty">جارٍ تجهيز مساحة العمل…</div></div>
+      </main>
+      <footer class="studio-footer"><span>استوديو المحتوى · <bdi>Adnan Alosman</bdi></span><a href="../" target="_blank" rel="noopener">عرض الموقع المنشور ↗</a></footer>
+    </div>
+  </div>
+  <dialog id="publish-dialog" aria-labelledby="publish-title">
+    <div class="dialog-header"><div><p class="eyebrow">الخطوة الأخيرة</p><h2 id="publish-title">مراجعة التعديلات ونشرها</h2></div><button type="button" class="icon-button" data-close="publish-dialog" aria-label="إغلاق نافذة النشر">×</button></div>
+    <p>ستُحفظ التعديلات في المستودع العام، ثم يُحدّث GitHub Pages الموقع. راجع النصوص في اللغتين قبل المتابعة.</p>
+    <div id="change-summary" class="change-summary"></div>
+    <label id="email-consent-row" class="check-row" hidden><input type="checkbox" id="email-consent"><span>أوافق على نشر البريد الإلكتروني الجديد للعامة داخل الموقع والمستودع.</span></label>
+    <details class="token-guide"><summary>إعداد صلاحية النشر لأول مرة</summary><ol>
+      <li>افتح إعدادات GitHub ثم <bdi>Developer settings → Personal access tokens → Fine-grained tokens</bdi>.</li>
+      <li>أنشئ رمزًا بتاريخ انتهاء مناسب، واختر <bdi>Only select repositories</bdi> ثم مستودع <bdi>adnanalosman.github.io</bdi> فقط.</li>
+      <li>ضمن صلاحيات المستودع، امنح <bdi>Contents: Read and write</bdi>. لا تحتاج اللوحة صلاحيات الإدارة أو سير العمل.</li>
+      <li>انسخ الرمز إلى الحقل أدناه. لا تضعه في ملفات الموقع أو ترسله في المحادثة.</li>
+    </ol><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens" target="_blank" rel="noopener noreferrer">تعليمات GitHub الرسمية ↗</a></details>
+    <div class="field"><label for="github-token">رمز الوصول إلى GitHub</label><input id="github-token" type="password" autocomplete="off" spellcheck="false" autocapitalize="none" dir="ltr" placeholder="github_pat_…" data-private="true"><small>يُستخدم أثناء الحفظ فقط، ولا يُحفظ في المسودات أو المتصفح. تسجيل الدخول إلى github.com وحده لا يمنح هذه اللوحة صلاحية الكتابة.</small></div>
+    <p id="publish-status" role="status" aria-live="polite"></p>
+    <div class="dialog-actions"><button type="button" class="button" data-close="publish-dialog">رجوع للتحرير</button><button type="button" class="button primary" id="publish">نشر التعديلات الآن</button></div>
+  </dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title">تأكيد الإجراء</h2><p id="confirm-message"></p><div class="dialog-actions"><button type="button" class="button" id="confirm-cancel">إلغاء</button><button type="button" class="button primary" id="confirm-yes">متابعة</button></div></dialog>
+  <noscript><p class="notice">تحتاج لوحة التحكم إلى JavaScript. يبقى الموقع العام متاحًا دونها.</p></noscript>
+</body>
+</html>
