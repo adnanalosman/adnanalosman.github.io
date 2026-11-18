@@ -3,7 +3,7 @@
 A restrained, bilingual portfolio presenting Adnan's professional work in data operations and reporting alongside his ongoing, self-taught C++ learning journey.
 
 **Live website:** https://adnanalosman.github.io/  
-**Content editor:** https://adnanalosman.github.io/admin/  
+**Local content editor** (run `npm run dev` first): http://127.0.0.1:3000/admin/  
 **Languages:** English (default) and Arabic with native RTL layout.
 
 ## Design and implementation
@@ -30,13 +30,13 @@ The preview server uses port `3000` by default. Use `PORT` to change it. The gen
 
 ## Update the content
 
-Open the [content editor](https://adnanalosman.github.io/admin/) to edit profile text and projects without writing JSON. The Arabic interface includes independent English/Arabic content fields, project ordering, local drafts, JSON import/export, and desktop/mobile previews in both themes. Editing is local until **Review and publish** is selected.
+Open the [content editor](http://127.0.0.1:3000/admin/) to edit profile text and projects without writing JSON. The Arabic interface includes independent English/Arabic content fields, project ordering, local drafts, JSON import/export, and desktop/mobile previews in both themes. Editing is local until **Review and publish** is selected.
 
 Publishing requires a fine-grained GitHub personal access token belonging to `adnanalosman`, limited to **this repository only**, with **Contents: Read and write**. Choose an expiration date. The editor explains setup in its publish dialog; [ADMIN.md](ADMIN.md) has the Arabic walkthrough. Signing into github.com does not authorize this independent static page.
 
 The token is used only for the current publish attempt, is cleared from the input immediately, and is never written to local/session storage, exported JSON or repository files. Requests go only to `https://api.github.com`. The editor code and public profile data are publicly readable; GitHub permissions protect writes. `noindex` is not access control. Do not put confidential data in drafts, exports or this public repository.
 
-One commit updates both JSON files, the generated English/Arabic pages, and the editor snapshot together. The renderer is shared with the local build, so Pages publishes the result without an Actions build token. A changed remote branch stops publication instead of overwriting newer work. If that happens, export the draft, reload current content, and reapply the intended changes.
+One commit updates both JSON files, the generated English/Arabic pages together. The renderer is shared with the local build, so Pages publishes the result without an Actions build token. A changed remote branch stops publication instead of overwriting newer work. If that happens, export the draft, reload current content, and reapply the intended changes.
 
 For manual changes:
 

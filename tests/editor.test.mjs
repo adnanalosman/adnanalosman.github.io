@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {validateContent,clone,emptyProject,REPOSITORY} from '../src/content-model.js';
 import {renderPage,renderContentFiles} from '../src/content-renderer.js';
-import {publishContent,publicationEntries,decodeContent,createGitHubClient} from '../docs/admin/github-client.js';
+import {publishContent,publicationEntries,decodeContent,createGitHubClient} from '../.local-admin/github-client.js';
 const profile=JSON.parse(await readFile(new URL('../data/profile.json',import.meta.url),'utf8'));
 const projects=JSON.parse(await readFile(new URL('../data/projects.json',import.meta.url),'utf8'));
 const baseline={head:'old-head',tree:'old-tree',profile,projects};
@@ -46,13 +46,13 @@ test('renderer applies edited name and project count, escapes text, preserves Ar
   assert.ok(!html.includes('<img src=x'));
   assert.ok(html.includes('<strong dir="ltr">05</strong>'));
   assert.equal(JSON.stringify(p),before);
-  assert.equal(JSON.parse(renderContentFiles(p,list)['docs/admin/snapshot.json']).projects.length,5);
+  assert.ok(!Object.keys(renderContentFiles(p,list)).some(path=>path.startsWith('docs/admin/')));
 });
 test('Unicode JSON decoding and generated files remain in sync',()=>{
   const content=Buffer.from(JSON.stringify(profile),'utf8').toString('base64');
   assert.deepEqual(JSON.parse(decodeContent({encoding:'base64',content})),profile);
   const entries=publicationEntries(edited(),projects);
-  assert.deepEqual(entries.map(x=>x.path),['data/profile.json','data/projects.json','docs/index.html','docs/ar/index.html','docs/admin/snapshot.json']);
+  assert.deepEqual(entries.map(x=>x.path),['data/profile.json','data/projects.json','docs/index.html','docs/ar/index.html']);
   assert.equal(JSON.parse(entries[0].content).ar.role,edited().ar.role);
   assert.ok(entries[3].content.includes(edited().ar.role));
 });
@@ -60,7 +60,7 @@ test('publishing creates one atomic commit with an existing parent and non-force
   const m=mock();
   const result=await publishContent({baseline,profile:edited(),projects,token:stubToken,fetcher:m.fetcher});
   assert.equal(result.head,'new-commit');
-  const tree=m.calls.find(x=>x.url.endsWith('/git/trees'));assert.equal(tree.body.base_tree,'old-tree');assert.equal(tree.body.tree.length,5);
+  const tree=m.calls.find(x=>x.url.endsWith('/git/trees'));assert.equal(tree.body.base_tree,'old-tree');assert.equal(tree.body.tree.length,4);
   const commit=m.calls.find(x=>x.url.endsWith('/git/commits'));assert.deepEqual(commit.body.parents,['old-head']);assert.equal(commit.body.author.email,'123+adnanalosman@users.noreply.github.com');
   const patch=m.calls.at(-1);assert.equal(patch.method,'PATCH');assert.equal(patch.body.force,false);
   for(const call of m.calls){
@@ -100,7 +100,7 @@ test('client will not send credentials to arbitrary endpoints',async()=>{
   assert.equal(m.calls.length,0);
 });
 test('editor has restrictive CSP, no indexing, external scripts and isolated token input',async()=>{
-  const html=await readFile(new URL('../docs/admin/index.html',import.meta.url),'utf8');
+  const html=await readFile(new URL('../.local-admin/index.html',import.meta.url),'utf8');
   assert.match(html,/noindex,nofollow/);assert.match(html,/script-src 'self'/);assert.match(html,/form-action 'none'/);
   assert.match(html,/id="github-token" type="password" autocomplete="off"/);
   assert.doesNotMatch(html,/<script[^>]+src="https?:/);

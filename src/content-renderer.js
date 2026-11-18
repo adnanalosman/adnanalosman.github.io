@@ -88,7 +88,6 @@ export function renderPage(profile, projects, lang) {
 export function renderContentFiles(profile, projects) {
  return {
   "docs/index.html": renderPage(profile,projects,"en"),
-  "docs/ar/index.html": renderPage(profile,projects,"ar"),
-  "docs/admin/snapshot.json": JSON.stringify({profile,projects},null,2)+"\n"
+  "docs/ar/index.html": renderPage(profile,projects,"ar")
  };
 }
