@@ -40,3 +40,5 @@ Date: **17 November 2026**
 - Inspected the desktop preview and mobile/tablet dashboard visually. No application-origin browser errors were observed.
 - The editor never stores a token in drafts or exports. It uses a fixed GitHub API origin, clears the input on submission/close, and has no third-party script or analytics dependency.
 - A publish attempt using a real personal access token has **not** been performed. The owner must supply a repository-scoped token for the first real editor publication. Public deployment of the editor is checked separately from the mocked write pipeline.
+- GitHub Pages deployment [44345066550](https://github.com/adnanalosman/adnanalosman.github.io/actions/runs/44345066550) succeeded for editor commit `76ed971a36be072061bc8b1a9581f965e569bb93`. Opened the live `/admin/`, loaded all four repository projects, switched content language, and rendered the dark mobile preview without application-origin errors.
+- The live check exposed the no-JavaScript navigation fallback inside the script-free preview. The preview now applies the initialized layout class so the mobile navigation starts closed, matching the public site.

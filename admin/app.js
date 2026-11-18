@@ -133,6 +133,8 @@ function preview(){
   const frame=node('iframe');frame.title='معاينة البورتفوليو قبل النشر';frame.setAttribute('sandbox','allow-same-origin');
   const doc=new DOMParser().parseFromString(renderPage(state.data.profile,state.data.projects,state.language),'text/html');
   doc.querySelectorAll('script').forEach(s=>s.remove());
+  // Match the public page's initialized layout without running its scripts.
+  doc.documentElement.classList.add('js');
   doc.documentElement.dataset.theme=state.previewTheme;
   for(const e of doc.querySelectorAll('[href],[src]')){
     for(const attr of ['href','src'])if(e.hasAttribute(attr)&&e.getAttribute(attr).includes('assets/'))e.setAttribute(attr,new URL('../assets/'+e.getAttribute(attr).split('assets/')[1],location.href).href);
